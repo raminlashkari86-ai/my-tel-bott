@@ -17,7 +17,7 @@ ADMIN_ID = int(os.getenv("ADMIN_ID", "71031452"))
 DB_PATH = os.getenv("DB_PATH", "users.db")
 
 if not BOT_TOKEN:
-    raise ValueError("8784120583:AAHr9h-P_lTedyQXjfjy13xP3sEMtDRld50!")
+    raise ValueError("BOT_TOKEN تنظیم نشده!")
 
 logging.basicConfig(level=logging.INFO)
 
@@ -260,7 +260,7 @@ if __name__ == "__main__":
     threading.Thread(target=run_flask, daemon=True).start()
     print(f"✅ Flask started on port {os.getenv('PORT', 10000)}")
 
-    app = ApplicationBuilder().token(8784120583:AAHr9h-P_lTedyQXjfjy13xP3sEMtDRld50).build()
+    app = ApplicationBuilder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("stats", stats_command))
     app.add_handler(CommandHandler("users", users_command))
