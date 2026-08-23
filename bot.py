@@ -265,7 +265,7 @@ if __name__ == "__main__":
     threading.Thread(target=run_flask, daemon=True).start()
     print(f"✅ Flask started on port {os.getenv('PORT', 10000)}")
 
-    app = ApplicationBuilder().token(BOT_TOKEN).build()
+    app = ApplicationBuilder().token(8784120583:AAELHpeCZrctW8kHnBHTDWlJPejVdF5qMwY).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("stats", stats_command))
     app.add_handler(CommandHandler("users", users_command))
